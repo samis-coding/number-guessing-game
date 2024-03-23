@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 import inquirer from "inquirer";
 
 const randomNumber = 43;
@@ -8,7 +8,11 @@ console.log("1: Number is greater than 35 and less than 50");
 console.log("2: Number is a Prime Number");
 
 
-  const { guessedNumber } = await inquirer.prompt([
+  const { name, guessedNumber } = await inquirer.prompt([
+    {
+      name: "name",
+      message: "Your Name: "
+    },
     {
       type: "list",
       message: "Guess the number:",
@@ -17,11 +21,12 @@ console.log("2: Number is a Prime Number");
     }
   ]);
 
+  console.log("Hello, " + name);
+
   if (parseInt(guessedNumber) === randomNumber) {
-    console.log("Congratulations ❤️ !!!, You have guessed the right number ");
+    console.log("Congratulations !!!, You have guessed the right number :) ");
   } else {
     console.log("You lose!!! The correct number was " + randomNumber);
   }
-
 
 

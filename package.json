@@ -1,6 +1,6 @@
 {
   "name": "samis-number-guessing-game",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "number guessing game using typescript",
   "main": "index.js",
   "type": "module",
